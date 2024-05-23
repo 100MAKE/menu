@@ -1,0 +1,82 @@
+nav#menu ul{
+    background-color: rgb(255, 1,77);
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+nav#menu ul li:hover{
+    background-color: white;
+    color: black;
+}
+nav#menu ul li a { 
+    white-space: nowrap;
+    height: 50px;
+    line-height: 50px;
+    color: inherit;
+    text-decoration: inherit;
+}
+/******SOUS MENU*******/
+#menu ul ul{
+    display: none;
+}
+#menu ul ul li a {
+    width: 200px;
+}
+#menu ul li:hover ul{
+    display:block
+}
+/******SOUS MENU DE SOUS MENU *******/
+#menu ul ul ul{
+left: 240px;
+top: 0;
+
+}
+#menu ul li:hover ul ul{
+    display: none;
+    }
+    #menu ul ul li:hover ul{
+        display: block;
+        }
+
+#menu > ul > li:first-child{
+    display: none;
+}
+@media screen and (max-width: 700px) {
+nav#menu >ul{
+    flex-direction: column;
+    gap: 0;
+}
+nav#menu >ul li{
+    text-align: center;
+    border-bottom: 0.1px solid #ccc;
+ 
+}
+nav#menu >ul >li:last-child{
+   border: none;
+}
+#menu ul li:hover ul{
+    display: none;
+}
+.dropdown:after{
+    content: "";
+
+}
+#menu > ul > li{
+    display: none;
+}
+#menu > ul > li:first-child{
+    display: block;
+}
+
+    
+}
+
+@media screen and (max-width: 1250px) {
+    /**sous menu de sous menu**/
+    #menu ul li:nth-child(3) ul ul{
+        left:-240px;
+    }
+
+   
+        
+    }
